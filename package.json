@@ -1,0 +1,13 @@
+{
+  "name": "serverless-python-requirements-issue-437",
+  "version": "1.0.0",
+  "description": "Minimum project to replicate UnitedIncome/serverless-python-requirements/issues/437",
+  "main": "serverless.yml",
+  "author": "Noel Llevares <noelmartin@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "serverless": "1.78.0",
+    "serverless-python-requirements": "5.1.0"
+  }
+}

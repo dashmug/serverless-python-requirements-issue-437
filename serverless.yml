@@ -1,0 +1,36 @@
+service: serverless-python-requirements-issue-437
+
+custom:
+  pythonRequirements:
+    slim: true
+
+provider:
+  name: aws
+  runtime: python3.8
+  stage: development
+  region: 'ap-southeast-2'
+  cfLogs: true
+  logRetentionInDays: 3
+  memorySize: 3008
+  timeout: 30
+  versionFunctions: false
+  environment:
+    STAGE: ${self:provider.stage}
+
+
+plugins:
+  - serverless-python-requirements
+
+
+package:
+  include:
+    - '!**'
+    - '*.py'
+  exclude:
+    - '**/tests/**'
+    - 'conftest.py'
+
+
+functions:
+  test:
+    handler: handlers.handler

@@ -1,0 +1,17 @@
+# Distribution / packaging
+.envrc
+.python-version
+
+__pycache__
+
+.serverless
+
+node_modules
+
+.coverage
+coverage.xml
+htmlcov
+
+.mypy_cache
+
+tests.sh
